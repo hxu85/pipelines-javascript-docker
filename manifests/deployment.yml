@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hxupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hxupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hxupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hxupipelinesjavascriptdocker 
+          image: acrhx2eastus.azurecr.io/hxupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
